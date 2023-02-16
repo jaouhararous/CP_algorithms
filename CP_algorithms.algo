@@ -1,0 +1,34 @@
+ALGORITHM  counter
+VAR
+ wnb:=1 :INTEGER
+ vnb:=0:INTEGER
+ cnb:=0:INTEGER
+ tar:STRING
+
+BEGIN
+    Read(tar);
+    cnb := tar.length
+   FOR i FROM 0 TO tar.length-1 STEP 1  DO
+    IF (tar[i]=" ") THEN
+        wnb=wnb+1
+    END_IF
+    IF (
+        tar[i]="a" OR
+      tar[i]="A" OR
+       tar[i]="e" OR
+        tar[i]="E" OR 
+         tar[i]="i" OR
+         tar[i]="I" OR
+         tar[i]="o" OR
+         tar[i]="O" OR
+         tar[i]="u" OR
+         tar[i]="U" OR
+         ) THEN
+       vnb = vnb +1
+           END_IF
+   END_FOR
+
+write("number of words is", wnb)
+write("numberof vowels is", vnb)
+write("number of charchters is",cnb)
+END
